@@ -1,0 +1,263 @@
+@import "tailwindcss";
+
+  body{
+       margin: 7px 10px 5px 10px;
+       padding: 0px;
+        overflow-x: hidden;
+        font-family: 'Poppins','Roboto', 'Lato', 'Montserrat';
+        background-color: white;    
+       }
+
+/* Flip Horizontal Animation */
+@keyframes spin-left-right {
+  0%, 100% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+}
+
+.animate-flip-horizontal {
+  animation: spin-left-right 3s linear infinite;
+}
+
+/* ✅ Marquee Animation Without Tailwind Config */
+@layer utilities {
+  .marquee-container {
+    position: relative;
+    width: 200px; /* adjust as needed */
+    overflow: hidden;
+    height: 2rem;
+  }
+
+  .marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 6s linear infinite;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+/* ✅ Card Scroll Animation */
+.scroll-container {
+  display: flex;
+  animation: scroll 10s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* ✅ News & Events Horizontal Scroll Animation */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-horizontal-scroll {
+  animation: scrollLeft 30s linear infinite;
+}
+
+/* Hide scrollbar cross-browser */
+/* Hide horizontal scrollbar like Pak Navy site */
+.scrollbar-hide {
+  scrollbar-width: none;         /* Firefox */
+  -ms-overflow-style: none;      /* IE 10+ */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;                 /* Chrome/Safari */
+}
+
+
+@keyframes flip-horizontal {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.animate-flip-horizontal {
+  animation: flip-horizontal 2s linear infinite;
+}
+
+
+
+ /* ipas form */
+ 
+.input, .fancy-input {
+  @apply w-full px-4 py-2 border border-blue-100 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition duration-150;
+}
+
+/* Flipcard */
+/* index.css */
+.perspective {
+  perspective: 1000px;
+}
+.transform-style {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+
+
+@keyframes underlineSlide {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.underline-animate {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 3px;
+  background-color: #06b6d4; /* cyan-500 */
+  animation: underlineSlide 1s ease-in-out infinite;
+}
+/* English.css */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  
+}
+
+.heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.disclaimer {
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 20px;
+  
+  font-weight: bold;
+}
+
+.faq-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.faq-question {
+  background-color: #2851A3;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+
+.faq-question:hover {
+  background-color: #3f8888;
+}
+
+.faq-answer {
+ background-color: #2851A3;
+  color: white;
+  padding: 12px 16px;
+  font-weight: bold;
+  font-style: italic;
+  display: none;
+}
+
+.faq-answer.show {
+  display: block;
+}
+
+/* DARK MODE STYLES */
+.dark-mode {
+  background-color: #121212 !important;
+  color: #f5f5f5;
+}
+
+.dark-mode .heading {
+  color: #ffffff;
+}
+
+.dark-mode .disclaimer {
+  color: rgb(255, 1, 1);
+}
+
+.dark-mode .faq-item {
+  border-color: #444;
+}
+
+.dark-mode .faq-question {
+  background-color: #2851A3;
+  color: #f5f5f5;
+}
+
+.dark-mode .faq-question:hover {
+  background-color: #3f8888;
+}
+
+.dark-mode .faq-answer {
+  background-color: #3f8888;
+  color: white;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 8px 16px;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
